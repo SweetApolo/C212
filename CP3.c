@@ -47,6 +47,9 @@ int main(){
         TOT += arr[i];
     }
     float PRO = Pro(numeroDatos, TOT); //Flotante por que el promedio puede tener decimales
-    
+
+    //Creacion del archivo de salida con los resultados
+    FILE *MAXMINPRO = fopen("./MAXMINPRO.out", "w");
+    fprintf(MAXMINPRO, "MAX= %i, MIN= %i, PRO= %.1f", MAX, MIN, PRO);
 
 }
