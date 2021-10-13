@@ -21,6 +21,32 @@ int main(){
         numeroDatos++;
     }
     
+    //Funciones Maximo Minimo y Promedio
+
+    //Rango MAX y MIN de una variable tipo int
+    int MAX = -32768;
+    int MIN = 32767;
+    float TOT;
+
+    //Funcion Maximo
+    for(int i = 0; i < numeroDatos; i++){
+        if(arr[i] > MAX){
+            MAX = arr[i];
+        }
+    }
+
+    //Funcion Minimo
+    for(int i = 0; i < numeroDatos; i++){
+        if(arr[i] < MIN){
+            MIN = arr[i];
+        }
+    }
+
+    //Promedio
+    for(int i = 0; i < numeroDatos; i++){
+        TOT += arr[i];
+    }
+    float PRO = Pro(numeroDatos, TOT); //Flotante por que el promedio puede tener decimales
     
 
 }
