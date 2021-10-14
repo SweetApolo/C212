@@ -7,10 +7,10 @@
 int size = 20; //Definir tamaño
 
 int main(){
-    FILE *fuente = fopen("numeross.txt", "r" /*r = abrir un archivo solo para leerlo */); //Flujo para acceder al archivo donde tenemos los numeros (LECTURA 15)
+    FILE *ArchNum = fopen("numeross.txt", "r" ); //Flujo para acceder al archivo donde tenemos los numeros (LECTURA 15), r = abrir un archivo solo para leerlo 
     //Uso del codigo TOKEN que nos dio el profe Franco
     char numeros[size]; //Arreglo char con el size
-    fgets(numeros, size, fuente); //Los numeros del archivo van a ser los valores del arreglo
+    fgets(numeros, size, ArchNum); //Los numeros del archivo van a ser los valores del arreglo
     char *token = strtok(numeros, " "); //Espacio para dividir el arreglo
     int *arr = malloc(sizeof(int) * size); //Arreglo en memoria dinamica
     int numeroDatos = 0; //Numeros que tiene el archivo de numeros.txt (6)
@@ -51,7 +51,7 @@ int main(){
     float PRO = Pro(numeroDatos, TOT); //Flotante por que el promedio puede tener decimales
 
     //Creacion del archivo de salida con los resultados
-    FILE *MAXMINPRO = fopen("./MAXMINPRO.out", "w"/*w = Crear el archivo*/); //Flujo para crear el archivo de salida(LECTURA 15)
+    FILE *MAXMINPRO = fopen("./MAXMINPRO.out", "w"); //Flujo para crear el archivo de salida(LECTURA 15) w = Crear el archivo
     fprintf(MAXMINPRO, "MAX= %i, MIN= %i, PRO= %.1f", MAX, MIN, PRO);
 
 }
